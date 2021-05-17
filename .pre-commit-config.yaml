@@ -1,4 +1,11 @@
 exclude: ".terraform"
+ci:
+  # many of these are covered by better reviewdog linters below
+  skip:
+    - terraform_tflint
+    - no-commit-to-branch
+    - terraform_tfsec
+
 repos:
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.50.0
